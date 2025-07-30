@@ -11,9 +11,9 @@ WORKDIR /app
 # Copy project files
 COPY . /app/
 
-# Install dependencies
+# Install Python dependencies from requirements.txt
 RUN pip install --upgrade pip \
- && pip install flask flask_sqlalchemy flask_migrate flask-wtf
+ && pip install -r requirements.txt
 
 # Expose port
 EXPOSE 5000
